@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <HBox alignment="CENTER" prefHeight="75.0" prefWidth="637.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="62.0" prefWidth="479.0" text="The Game of Chance" textFill="#0caeeb">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="125.0" prefWidth="644.0" spacing="30.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+               <children>
+                  <Label text="Money Pool:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="moneyPool" text="1000">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Label text="How much will you bet?">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" prefHeight="125.0" prefWidth="201.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="betAmount" alignment="CENTER" promptText="Amount" />
+                  <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#confirmBet" text="Confirm" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label />
+      <HBox alignment="CENTER" prefHeight="56.0" prefWidth="644.0" spacing="30.0">
+         <children>
+            <Button fx:id="diceOneButton" disable="true" onAction="#rollDiceOne" text="Roll First Dice">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="diceTwoButton" disable="true" mnemonicParsing="false" onAction="#rollDiceTwo" text="Roll Second Dice">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="140.0" prefWidth="644.0" spacing="30.0">
+         <children>
+            <Label text="First Dice:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="diceOne" textFill="RED">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+            <Label text="Second Dice:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="diceTwo" textFill="RED">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="83.0" prefWidth="644.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="83.0" prefWidth="474.0">
+               <children>
+                  <Label fx:id="winOrLose" alignment="CENTER" textFill="#bf1313">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#restart" text="Play Again?">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
