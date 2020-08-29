@@ -4,8 +4,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+
+
+
 public class Main {
-    public static void main(String[] args) throws IOException {
+
+    public static void searchMethod() throws IOException {
         ArrayList<String> lines = new ArrayList<>();//initialize array
         ArrayList<Integer> words = new ArrayList<>();
         FileReader fr = new FileReader("in.txt");//creates file reader object
@@ -22,5 +26,8 @@ public class Main {
         }
         System.out.println("The input appears in the following index positions " + words);
         fr.close();
+    }
+    public static void main(String[] args) throws IOException {
+        searchMethod();
     }
 }
