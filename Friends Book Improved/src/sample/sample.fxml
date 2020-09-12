@@ -70,6 +70,8 @@
                         <Button layoutX="246.0" layoutY="302.0" mnemonicParsing="false" onAction="#deleteFriend" text="Delete Friend" />
                         <Button layoutX="378.0" layoutY="302.0" mnemonicParsing="false" onAction="#saveFriend" text="Save Friend" />
                         <Button layoutX="502.0" layoutY="302.0" mnemonicParsing="false" onAction="#loadFriends" text="Load Friends" />
+                        <TextField fx:id="saveFile" alignment="CENTER" layoutX="246.0" layoutY="332.0" promptText="Save to this File" />
+                        <TextField fx:id="loadFile" alignment="CENTER" layoutX="437.0" layoutY="332.0" promptText="Load from this File" />
                      </children></AnchorPane>
             </content>
           </Tab>

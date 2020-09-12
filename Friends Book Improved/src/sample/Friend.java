@@ -1,5 +1,9 @@
 package sample;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Friend {
     //declare variables
     String name;
@@ -11,8 +15,18 @@ public class Friend {
         age = a;
         hobby = h;
     }
-    //getters and setters
 
+    public void writeToFile(String fileName) throws IOException {
+        FileWriter fw = new FileWriter(fileName, true);
+        BufferedWriter bw = new BufferedWriter(fw);
+        bw.write(name + ",\r");
+        bw.write(age + "*\r");
+        bw.write(hobby + "\r");
+        bw.write(";\r");
+        bw.close();
+    }
+
+    //getters and setters
     public String getName() {
         return name;
     }

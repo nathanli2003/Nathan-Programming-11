@@ -29,17 +29,21 @@ public class CreateFriend {
         return friends;
     }
 
-    private static void parseFriend(String string) {
-        int pos = 0;
+    private static void parseFriend (String string){
+        int posOne = 0;
+        int posTwo = 0;
         String name = "";
         String hobby = "";
         int age = 0;
-        for (int i = 0; i < string.length(); i++) {
-            if (string.substring(i, i + 1).equals(",")) {
-                pos = i;
-                name = string.substring(0, pos);
-                age = Integer.parseInt(string.substring(pos + 1));
-                hobby = string.substring(pos + 2);
+        for (int i = 0; i<string.length(); i++){
+            if(string.substring(i, i+1).equals(",")) {
+                posOne = i;
+                name = string.substring(0, posOne);
+            }
+            if (string.substring(i, i+1).equals("*")){
+                posTwo = i;
+                age = Integer.parseInt(string.substring(posOne+1, posTwo));
+                hobby = string.substring(posTwo+1);
             }
         }
         friends.add(new Friend(name, age, hobby));
