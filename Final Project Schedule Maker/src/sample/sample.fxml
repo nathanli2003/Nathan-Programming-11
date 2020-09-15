@@ -6,7 +6,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
@@ -20,23 +19,9 @@
          <children>
             <VBox alignment="CENTER" prefHeight="342.0" prefWidth="173.0" spacing="30.0">
                <children>
-                  <HBox alignment="CENTER" prefHeight="53.0" prefWidth="173.0" spacing="10.0">
-                     <children>
-                        <Label text="Block:">
-                           <font>
-                              <Font size="29.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="blockCount" text="1">
-                           <font>
-                              <Font size="29.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
                   <TextField fx:id="course" alignment="CENTER" promptText="Course Name" />
                   <TextField fx:id="teacher" alignment="CENTER" promptText="Teacher" />
-                  <TextField fx:id="location" alignment="CENTER" promptText="Location" />
+                  <TextField fx:id="myLocation" alignment="CENTER" promptText="Location" />
                   <Button mnemonicParsing="false" onAction="#submit" text="Submit" />
                </children>
             </VBox>
@@ -63,7 +48,7 @@
                   <Label text="Location:" />
                </children>
             </VBox>
-            <VBox alignment="CENTER" prefHeight="192.0" prefWidth="105.0" spacing="40.0">
+            <VBox alignment="CENTER" prefHeight="183.0" prefWidth="193.0" spacing="40.0">
                <children>
                   <Label fx:id="labelCourse" />
                   <Label fx:id="labelTeacher" />
