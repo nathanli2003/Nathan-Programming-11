@@ -1,3 +1,3 @@
 # Nathan-Programming-11
 
-Having Trouble With my final project.
+Grade 11 Programming Course.
